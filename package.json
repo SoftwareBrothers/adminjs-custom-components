@@ -1,5 +1,5 @@
 {
-  "name": "@softwarebrothers/admin-bro-custom-components",
+  "name": "@adminjs/custom-components",
   "version": "1.1.0",
   "main": "lib/index.js",
   "types": "types/index.d.ts",
