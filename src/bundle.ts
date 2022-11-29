@@ -1,5 +1,5 @@
-import AdminBro from 'admin-bro';
+import AdminBro from 'adminjs'
 
 export const bundle = (componentName: string): string => {
-  return AdminBro.bundle(`../src/components/${componentName}`);
-};
+  return AdminBro.bundle(`../src/components/${componentName}`)
+}

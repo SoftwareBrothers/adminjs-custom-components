@@ -1,5 +1,5 @@
-import React, { FC, useMemo } from 'react';
-import { BasePropertyComponent, BasePropertyProps } from 'admin-bro';
+import React, { FC, useMemo } from 'react'
+import { BasePropertyComponent, BasePropertyProps } from 'adminjs'
 
 /**
  * This component is the same as `BasePropertyComponent` but it will not render
@@ -10,12 +10,13 @@ import { BasePropertyComponent, BasePropertyProps } from 'admin-bro';
  * specific `where` value and default for all others.
  */
 const CleanPropertyComponent: FC<BasePropertyProps> = props => {
-  const { property } = props;
-  const cleanProperty = useMemo(() => ({ ...property, components: {} }), [
-    property,
-  ]);
+  const { property } = props
+  const cleanProperty = useMemo(
+    () => ({ ...property, components: {} }),
+    [property]
+  )
 
-  return <BasePropertyComponent {...props} property={cleanProperty} />;
-};
+  return <BasePropertyComponent {...props} property={cleanProperty} />
+}
 
-export default CleanPropertyComponent;
+export default CleanPropertyComponent

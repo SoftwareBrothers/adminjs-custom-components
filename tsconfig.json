@@ -15,7 +15,8 @@
     "baseUrl": "./",
     "outDir": "lib",
     "declarationDir": "types",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true
   },
   "exclude": ["test", "lib", "types"]
 }

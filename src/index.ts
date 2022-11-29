@@ -1,6 +1,6 @@
-import { bundle } from './bundle';
+import { bundle } from './bundle'
 
-const TestComponent = bundle('TestComponent');
-const ReferenceField = bundle('ReferenceField');
+const TestComponent = bundle('TestComponent')
+const ReferenceField = bundle('ReferenceField')
 
-export { TestComponent, ReferenceField };
+export { TestComponent, ReferenceField }
