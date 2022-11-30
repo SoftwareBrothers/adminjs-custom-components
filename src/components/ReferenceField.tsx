@@ -2,8 +2,7 @@
 import { FormGroup, FormMessage, Label } from '@adminjs/design-system'
 import { BasePropertyProps, EditPropertyProps, flat } from 'adminjs'
 import React, { FC } from 'react'
-// import ValueType from 'react-select';
-import Select from 'react-select/async'
+import { SelectAsync } from '@adminjs/design-system'
 
 import { CleanPropertyComponent } from 'adminjs'
 import {
@@ -59,7 +58,6 @@ const SingleReferenceEdit: FC<EditPropertyProps> = props => {
     selectedIds,
   })
 
-  //ValueType<RecordJSON>
   const handleChange = (type: unknown): void => {
     if (!type) {
       onChange(property.path, null)
@@ -78,7 +76,7 @@ const SingleReferenceEdit: FC<EditPropertyProps> = props => {
   return (
     <FormGroup>
       <Label htmlFor={property.path}>{property.label}</Label>
-      <Select
+      <SelectAsync
         value={actualSelected}
         cacheOptions
         loadOptions={(input, callback) => {
@@ -86,10 +84,6 @@ const SingleReferenceEdit: FC<EditPropertyProps> = props => {
         }}
         onChange={handleChange}
         isDisabled={property.isDisabled}
-        getOptionLabel={option =>
-          option.params?.[searchProperty] ?? option[searchProperty]
-        }
-        getOptionValue={option => option.id}
         defaultOptions
         isMulti={isMulti ?? false}
         isClearable
