@@ -28,7 +28,6 @@ export interface SingleReferenceFieldCustomProps {
 }
 
 const SingleReferenceEdit: FC<EditPropertyProps> = props => {
-  console.log('SingleReferenceEdit', props)
   const { property, record, onChange } = props
   const { custom } = property
   const {
