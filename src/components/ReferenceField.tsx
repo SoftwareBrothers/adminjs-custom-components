@@ -2,8 +2,8 @@
 import { FormGroup, FormMessage, Label } from '@adminjs/design-system'
 import { BasePropertyProps, EditPropertyProps, flat } from 'adminjs'
 import React, { FC } from 'react'
-import { SelectAsync } from '@adminjs/design-system'
-
+// import { SelectAsync } from '@adminjs/design-system'
+import Select from 'react-select/async'
 import { CleanPropertyComponent } from 'adminjs'
 import {
   ReferenceFieldFilterType,
@@ -76,7 +76,7 @@ const SingleReferenceEdit: FC<EditPropertyProps> = props => {
   return (
     <FormGroup>
       <Label htmlFor={property.path}>{property.label}</Label>
-      <SelectAsync
+      <Select
         value={actualSelected}
         cacheOptions
         loadOptions={(input, callback) => {

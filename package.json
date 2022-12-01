@@ -21,7 +21,7 @@
   },
   "peerDependencies": {
     "@adminjs/design-system": "^3.1.0",
-    "adminjs": "^6.6.5"
+    "adminjs": "^6.7.0"
   },
   "devDependencies": {
     "@adminjs/design-system": "^3.1.0",
