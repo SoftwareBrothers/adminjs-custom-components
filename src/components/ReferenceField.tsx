@@ -85,6 +85,10 @@ const SingleReferenceEdit: FC<EditPropertyProps> = props => {
         onChange={handleChange}
         isDisabled={property.isDisabled}
         defaultOptions
+        getOptionLabel={option =>
+          option.params?.[searchProperty] ?? option[searchProperty]
+        }
+        getOptionValue={option => option.id}
         isMulti={isMulti ?? false}
         isClearable
         {...property.props}
