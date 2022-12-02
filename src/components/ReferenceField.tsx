@@ -2,8 +2,7 @@
 import { FormGroup, FormMessage, Label } from '@adminjs/design-system'
 import { BasePropertyProps, EditPropertyProps, flat } from 'adminjs'
 import React, { FC } from 'react'
-// import { SelectAsync } from '@adminjs/design-system'
-import Select from 'react-select/async'
+import { SelectAsync } from '@adminjs/design-system'
 import { CleanPropertyComponent } from 'adminjs'
 import {
   ReferenceFieldFilterType,
@@ -58,7 +57,7 @@ const SingleReferenceEdit: FC<EditPropertyProps> = props => {
     selectedIds,
   })
 
-  const handleChange = (type: unknown): void => {
+  const handleChange = (type): void => {
     if (!type) {
       onChange(property.path, null)
     } else if (Array.isArray(type)) {
@@ -76,7 +75,7 @@ const SingleReferenceEdit: FC<EditPropertyProps> = props => {
   return (
     <FormGroup>
       <Label htmlFor={property.path}>{property.label}</Label>
-      <Select
+      <SelectAsync
         value={actualSelected}
         cacheOptions
         loadOptions={(input, callback) => {
