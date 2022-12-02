@@ -1,9 +1,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { FormGroup, FormMessage, Label } from '@adminjs/design-system'
-import { BasePropertyProps, EditPropertyProps, flat } from 'adminjs'
+import {
+  FormGroup,
+  FormMessage,
+  Label,
+  SelectAsync,
+} from '@adminjs/design-system'
+import {
+  BasePropertyProps,
+  EditPropertyProps,
+  flat,
+  CleanPropertyComponent,
+} from 'adminjs'
 import React, { FC } from 'react'
-import { SelectAsync } from '@adminjs/design-system'
-import { CleanPropertyComponent } from 'adminjs'
 import {
   ReferenceFieldFilterType,
   useFetchOptions,
@@ -84,10 +92,10 @@ const SingleReferenceEdit: FC<EditPropertyProps> = props => {
         onChange={handleChange}
         isDisabled={property.isDisabled}
         defaultOptions
-        getOptionLabel={option =>
+        getOptionLabel={(option: any) =>
           option.params?.[searchProperty] ?? option[searchProperty]
         }
-        getOptionValue={option => option.id}
+        getOptionValue={(option: any) => option.id}
         isMulti={isMulti ?? false}
         isClearable
         {...property.props}
