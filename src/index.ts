@@ -1,6 +1,4 @@
-import { bundle } from './bundle';
+import { bundle } from './bundle'
+import SingleReferenceField from './components/ReferenceField'
 
-const TestComponent = bundle('TestComponent');
-const ReferenceField = bundle('ReferenceField');
-
-export { TestComponent, ReferenceField };
+export { bundle as default, SingleReferenceField as ReferenceField }

@@ -3,8 +3,8 @@ module.exports = {
   plugins: ['@typescript-eslint/eslint-plugin'],
   extends: [
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
     'plugin:react/recommended',
+    'plugin:prettier/recommended',
   ],
   parserOptions: {
     ecmaVersion: 2018,
@@ -23,4 +23,4 @@ module.exports = {
       version: 'detect',
     },
   },
-};
+}
