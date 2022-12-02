@@ -30,23 +30,6 @@ jobs:
       - name: Release
         env:
           SLACK_WEBHOOK: ${{ secrets.ADMIN_SLACK_WEBHOOK }}
-          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: yarn release
-
-  notify:
-    name: Notify
-    runs-on: ubuntu-latest
-    if: failure()
-    needs:
-      - test
-    steps:
-      - uses: technote-space/workflow-conclusion-action@v1
-      - uses: 8398a7/action-slack@v3
-        with:
-          status: ${{ env.WORKFLOW_CONCLUSION }}
-          fields: repo,message,commit,author,action,eventName,ref,workflow
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
-        if: always()
