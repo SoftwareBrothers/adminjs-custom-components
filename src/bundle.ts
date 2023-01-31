@@ -9,7 +9,7 @@ export const bundle = (
 ): string => {
   componentLoader.add(
     componentName,
-    path.join(dirname, `../src/components/${componentName}`)
+    path.join(dirname, `components/${componentName}`)
   )
 
   return componentName
