@@ -1,4 +1,6 @@
 import { bundle } from './bundle'
-import SingleReferenceField from './components/ReferenceField'
 
-export { bundle as default, SingleReferenceField as ReferenceField }
+export { default as ReferenceField } from './components/ReferenceField'
+export { default as NotEditableInput } from './components/NotEditableInput'
+
+export default bundle

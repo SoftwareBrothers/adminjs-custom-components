@@ -1,18 +1,16 @@
-# Feature for AdminJS
+# @adminjs/custom-components
 
 This is a repository with custom components.
 
-## AdminJS
+# AdminJS
 
-AdminJS is an automatic admin interface which can be plugged into your application. You, as a developer, provide database models (like posts, comments, stores, products or whatever else your application uses), and AdminJS generates UI which allows you (or other trusted users) to manage content.
+[AdminJS](https://adminjs.co/) is an automatic admin interface that can be plugged into your application. You, as a developer, provide database models (like posts, comments, stores, products or whatever else your application uses), and AdminJS generates UI which allows you (or other trusted users) to manage content.
 
-Check out the example application here: https://adminjs-demo.herokuapp.com/admin
-
-Or visit [AdminJS](https://github.com/SoftwareBrothers/adminjs) github page.
+Inspired by: [django admin](https://docs.djangoproject.com), [rails admin](https://github.com/sferik/rails_admin) and [active admin](https://activeadmin.info/).
 
 ## Usage
 
-Please see the documentation: https://docs.adminjs.co/ui-customization/writing-your-own-components
+Check out [the official documentation](https://docs.adminjs.co/tutorials/custom-components-library)
 
 ## License
 
